@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fitly — Discover Your Style</title>
+  <meta name="description" content="Fitly is a fashion discovery platform where you can explore outfits, build your wardrobe, and share your personal style with the world." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      <a href="#home" class="sidebar-logo"><span class="logo-text">Fitly</span></a>
+      <nav class="sidebar-nav" role="navigation" aria-label="Main navigation">
+        <a href="#home" class="nav-item" id="nav-home"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Home</span></a>
+        <a href="#explore" class="nav-item" id="nav-explore"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><span>Explore</span></a>
+        <a href="#create" class="nav-item" id="nav-create"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg><span>Create Post</span></a>
+        <a href="#wardrobe" class="nav-item" id="nav-wardrobe"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.57a1 1 0 00.99.84H7v13a2 2 0 002 2h6a2 2 0 002-2V10h3.15a1 1 0 00.99-.84l.58-3.57a2 2 0 00-1.34-2.23z"/></svg><span>Wardrobe</span></a>
+        <a href="#profile" class="nav-item" id="nav-profile"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Profile</span></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <a href="#settings" class="nav-item" id="nav-settings"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg><span>Settings</span></a>
+        <a href="#profile" class="sidebar-profile-mini">
+          <img src="media/pp1.jpg" alt="Your profile" class="avatar-xs" />
+          <div class="sidebar-profile-info"><span class="sidebar-profile-name">Sofia Marini</span><span class="sidebar-profile-handle">@sofiamarini</span></div>
+        </a>
+      </div>
+    </div>
+  </aside>
+  <main class="main-content">
+    <header class="topbar">
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="search" class="search-input" placeholder="Search outfits, styles, users..." id="main-search" aria-label="Search Fitly" />
+      </div>
+      <div class="topbar-actions">
+        <a href="#" class="topbar-btn" aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg><span class="notif-dot"></span></a>
+        <a href="#profile" class="topbar-avatar"><img src="media/pp1.jpg" alt="Profile" class="avatar-sm" /></a>
+      </div>
+    </header>
+
+    <!-- HOME PAGE -->
+    <section class="page" id="home">
+      <div class="page-inner">
+        <div class="page-heading">
+          <h1 class="page-title">Recommended for You</h1>
+          <p class="page-subtitle">Fresh looks curated to your taste</p>
+        </div>
+        <div class="masonry-grid" id="home-grid">
+
+          <article class="outfit-card card-tall">
+            <a href="#post-detail" class="card-image-wrap">
+              <img src="media/casual.jpg" alt="Casual Outfit" class="card-image" loading="lazy" />
+              <div class="card-overlay"><button class="overlay-like" aria-label="Like"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button></div>
+            </a>
+            <div class="card-info">
+              <a href="#post-detail" class="card-title">Casual</a>
+              <div class="card-meta"><img src="media/pp1.jpg" alt="@sofiamarini" class="avatar-xs" /><span class="card-username">@sofiamarini</span><span class="card-likes"><svg viewBox="0 0 24 24" fill="currentColor" class="like-icon-sm"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>2.4k</span></div>
+              <div class="card-tags"><span class="tag">Casual</span><span class="tag">Minimalist</span></div>
+            </div>
+          </article>
+
+          <article class="outfit-card card-medium">
+            <a href="#post-detail" class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&q=80" alt="Streetwear" class="card-image" loading="lazy" />
+              <div class="card-overlay"><button class="overlay-like" aria-label="Like"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button></div>
+            </a>
+            <div class="card-info">
+              <a href="#post-detail" class="card-title">Urban Streetwear</a>
+              <div class="card-meta"><img src="https://images.unsplash.com/photo-1463453091185-61582044d556?w=40&h=40&fit=crop&crop=face" alt="" class="avatar-xs" /><span class="card-username">@alexkwon</span><span class="card-likes"><svg viewBox="0 0 24 24" fill="currentColor" class="like-icon-sm"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>1.1k</span></div>
+              <div class="card-tags"><span class="tag">Streetwear</span></div>
+            </div>
+          </article>
+
+          <article class="outfit-card card-tall">
+            <a href="#post-detail" class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&q=80" alt="Floral Midi" class="card-image" loading="lazy" />
+              <div class="card-overlay"><button class="overlay-like" aria-label="Like"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button></div>
+            </a>
+            <div class="card-info">
+              <a href="#post-detail" class="card-title">Terracotta Floral Midi</a>
+              <div class="card-meta"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face" alt="" class="avatar-xs" /><span class="card-username">@miachang</span><span class="card-likes"><svg viewBox="0 0 24 24" fill="currentColor" class="like-icon-sm"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>3.7k</span></div>
+              <div class="card-tags"><span class="tag">Casual</span><span class="tag">Vintage</span></div>
+            </div>
+          </article>
+
+          <article class="outfit-card card-short">
+            <a href="#post-detail" class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80" alt="Minimalist" class="card-image" loading="lazy" />
+              <div class="card-overlay"><button class="overlay-like" aria-label="Like"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button></div>
+            </a>
+            <div class="card-info">
+              <a href="#post-detail" class="card-title">Minimalist Work Look</a>
+              <div class="card-meta"><img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=40&h=40&fit=crop&crop=face" alt="" class="avatar-xs" /><span class="card-username">@janelim</span><span class="card-likes"><svg viewBox="0 0 24 24" fill="currentColor" class="like-icon-sm"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>892</span></div>
+            </div>
+          </article>
+
+          <article class="outfit-card card-tall">
+            <a href="#post-detail" class="card-image-wrap">
+              <img src="media/acubi.jpg" alt="Acubi Style" class="card-image" loading="lazy" />
+              <div class="card-overlay"><button class="overlay-like" aria-label="Like"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button></div>
+            </a>
+            <div class="card-info">
+              <a href="#post-detail" class="card-title">Acubi</a>
+              <div class="card-meta"><img src="media/pp2.jpg" alt="@emmarose" class="avatar-xs" /><span class="card-username">@emmarose</span><span class="card-likes"><svg viewBox="0 0 24 24" fill="currentColor" class="like-icon-sm"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>5.2k</span></div>
+              <div class="card-tags"><span class="tag">Acubi</span><span class="tag">Y2K</span></div>
+            </div>
+          </article>
+
+          <article class="outfit-card card-medium">
+            <a href="#post-detail" class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80" alt="Smart Casual" class="card-image" loading="lazy" />
+              <div class="card-overlay"><button class="overlay-like" aria-label="Like"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button></div>
+            </a>
+            <div class="card-info">
+              <a href="#post-detail" class="card-title">Weekend Smart Casual</a>
+              <div class="card-meta"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=face" alt="" class="avatar-xs" /><span class="card-username">@marcotorres</span><span class="card-likes"><svg viewBox="0 0 24 24" fill="currentColor" class="like-icon-sm"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>1.8k</span></div>
+              <div class="card-tags"><span class="tag">Smart Casual</span></div>
+            </div>
+          </article>
+
+          <article class="outfit-card card-tall">
+            <a href="#post-detail" class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600&q=80" alt="White Linen" class="card-image" loading="lazy" />
+              <div class="card-overlay"><button class="overlay-like" aria-label="Like"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button></div>
+            </a>
+            <div class="card-info">
+              <a href="#post-detail" class="card-title">White Linen Coastal</a>
+              <div class="card-meta"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=40&h=40&fit=crop&crop=face" alt="" class="avatar-xs" /><span class="card-username">@clarawhite</span><span class="card-likes"><svg viewBox="0 0 24 24" fill="currentColor" class="like-icon-sm"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>4.3k</span></div>
+              <div class="card-tags"><span class="tag">Minimalist</span><span class="tag">Summer</span></div>
+            </div>
+          </article>
+
+          <article class="outfit-card card-medium">
+            <a href="#post-detail" class="card-image-wrap">
+              <img src="media/grunge.jpg" alt="Grunge Outfit" class="card-image" loading="lazy" />
+              <div class="card-overlay"><button class="overlay-like" aria-label="Like"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button></div>
+            </a>
+            <div class="card-info">
+              <a href="#post-detail" class="card-title">Grunge</a>
+              <div class="card-meta"><img src="media/pp3.jpg" alt="@reypark" class="avatar-xs" /><span class="card-username">@reypark</span><span class="card-likes"><svg viewBox="0 0 24 24" fill="currentColor" class="like-icon-sm"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>2.9k</span></div>
+              <div class="card-tags"><span class="tag">Grunge</span><span class="tag">Streetwear</span></div>
+            </div>
+          </article>
+
+          <article class="outfit-card card-tall">
+            <a href="#post-detail" class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1548334433-53bca3c17b40?w=600&q=80" alt="Camel Coat" class="card-image" loading="lazy" />
+              <div class="card-overlay"><button class="overlay-like" aria-label="Like"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button></div>
+            </a>
+            <div class="card-info">
+              <a href="#post-detail" class="card-title">Autumn Camel Coat</a>
+              <div class="card-meta"><img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=40&h=40&fit=crop&crop=face" alt="" class="avatar-xs" /><span class="card-username">@sofiamarini</span><span class="card-likes"><svg viewBox="0 0 24 24" fill="currentColor" class="like-icon-sm"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>6.1k</span></div>
+              <div class="card-tags"><span class="tag">Casual</span><span class="tag">Autumn</span></div>
+            </div>
+          </article>
+
+          <article class="outfit-card card-medium">
+            <a href="#post-detail" class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Cottagecore" class="card-image" loading="lazy" />
+              <div class="card-overlay"><button class="overlay-like" aria-label="Like"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button></div>
+            </a>
+            <div class="card-info">
+              <a href="#post-detail" class="card-title">Cottagecore Floral Set</a>
+              <div class="card-meta"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face" alt="" class="avatar-xs" /><span class="card-username">@miachang</span><span class="card-likes"><svg viewBox="0 0 24 24" fill="currentColor" class="like-icon-sm"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>8.4k</span></div>
+              <div class="card-tags"><span class="tag">Vintage</span><span class="tag">Cottagecore</span></div>
+            </div>
+          </article>
+
+          <article class="outfit-card card-tall">
+            <a href="#post-detail" class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80" alt="All Black" class="card-image" loading="lazy" />
+              <div class="card-overlay"><button class="overlay-like" aria-label="Like"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button></div>
+            </a>
+            <div class="card-info">
+              <a href="#post-detail" class="card-title">All Black Everything</a>
+              <div class="card-meta"><img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=40&h=40&fit=crop&crop=face" alt="" class="avatar-xs" /><span class="card-username">@janelim</span><span class="card-likes"><svg viewBox="0 0 24 24" fill="currentColor" class="like-icon-sm"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>3.3k</span></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPLORE PAGE -->
+    <section class="page" id="explore">
+      <div class="page-inner">
+        <div class="page-heading"><h1 class="page-title">Explore Styles</h1><p class="page-subtitle">Discover what the fashion community is wearing</p></div>
+        <div class="filter-bar" role="group">
+          <button class="filter-chip active" id="filter-all">All</button>
+          <button class="filter-chip" id="filter-casual">Casual</button>
+          <button class="filter-chip" id="filter-acubi">Acubi</button>
+          <button class="filter-chip" id="filter-grunge">Grunge</button>
+          <button class="filter-chip" id="filter-streetwear">Streetwear</button>
+          <button class="filter-chip" id="filter-formal">Formal</button>
+          <button class="filter-chip" id="filter-vintage">Vintage</button>
+          <button class="filter-chip" id="filter-minimalist">Minimalist</button>
+          <button class="filter-chip" id="filter-y2k">Y2K</button>
+          <button class="filter-chip" id="filter-smartcasual">Smart Casual</button>
+          <button class="filter-chip" id="filter-cottagecore">Cottagecore</button>
+        </div>
+        <div class="masonry-grid" id="explore-grid">
+          <article class="outfit-card card-medium"><a href="#post-detail" class="card-image-wrap"><img src="https://images.unsplash.com/photo-1554568218-0f1715e72254?w=600&q=80" alt="Boho" class="card-image" loading="lazy" /><div class="card-overlay"><button class="overlay-like" aria-label="Like"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button></div></a><div class="card-info"><a href="#post-detail" class="card-title">Boho Chic Layers</a><div class="card-meta"><img src="media/pp2.jpg" alt="" class="avatar-xs" /><span class="card-username">@emmarose</span><span class="card-likes"><svg viewBox="0 0 24 24" fill="currentColor" class="like-icon-sm"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>2.1k</span></div><div class="card-tags"><span class="tag">Casual</span></div></div></article>
+          <article class="outfit-card card-tall"><a href="#post-detail" class="card-image-wrap"><img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600&q=80" alt="Editorial" class="card-image" loading="lazy" /><div class="card-overlay"><button class="overlay-like" aria-label="Like"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button></div></a><div class="card-info"><a href="#post-detail" class="card-title">Bold Editorial Red</a><div class="card-meta"><img src="media/pp3.jpg" alt="" class="avatar-xs" /><span class="card-username">@reypark</span><span class="card-likes"><svg viewBox="0 0 24 24" fill="currentColor" class="like-icon-sm"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>7.4k</span></div><div class="card-tags"><span class="tag">Formal</span><span class="tag">Editorial</span></div></div></article>
+          <article class="outfit-card card-medium"><a href="#post-detail" class="card-image-wrap"><img src="https://images.unsplash.com/photo-1542295669297-4d0e73b18554?w=600&q=80" alt="Preppy" class="card-image" loading="lazy" /><div class="card-overlay"><button class="overlay-like" aria-label="Like"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button></div></a><div class="card-info"><a href="#post-detail" class="card-title">Preppy Classic Layers</a><div class="card-meta"><img src="https://images.unsplash.com/photo-1463453091185-61582044d556?w=40&h=40&fit=crop&crop=face" alt="" class="avatar-xs" /><span class="card-username">@alexkwon</span><span class="card-likes"><svg viewBox="0 0 24 24" fill="currentColor" class="like-icon-sm"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>1.3k</span></div><div class="card-tags"><span class="tag">Smart Casual</span></div></div></article>
+          <article class="outfit-card card-tall"><a href="#post-detail" class="card-image-wrap"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&q=80" alt="Shopping" class="card-image" loading="lazy" /><div class="card-overlay"><button class="overlay-like" aria-label="Like"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button></div></a><div class="card-info"><a href="#post-detail" class="card-title">Shopping Day Chic</a><div class="card-meta"><img src="media/pp1.jpg" alt="" class="avatar-xs" /><span class="card-username">@sofiamarini</span><span class="card-likes"><svg viewBox="0 0 24 24" fill="currentColor" class="like-icon-sm"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>4.8k</span></div><div class="card-tags"><span class="tag">Casual</span></div></div></article>
+          <article class="outfit-card card-short"><a href="#post-detail" class="card-image-wrap"><img src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?w=600&q=80" alt="Workwear" class="card-image" loading="lazy" /><div class="card-overlay"><button class="overlay-like" aria-label="Like"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button></div></a><div class="card-info"><a href="#post-detail" class="card-title">Sharp Workwear</a><div class="card-meta"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=face" alt="" class="avatar-xs" /><span class="card-username">@marcotorres</span><span class="card-likes"><svg viewBox="0 0 24 24" fill="currentColor" class="like-icon-sm"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>986</span></div><div class="card-tags"><span class="tag">Formal</span></div></div></article>
+          <article class="outfit-card card-medium"><a href="#post-detail" class="card-image-wrap"><img src="https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?w=600&q=80" alt="Soft Girl" class="card-image" loading="lazy" /><div class="card-overlay"><button class="overlay-like" aria-label="Like"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button></div></a><div class="card-info"><a href="#post-detail" class="card-title">Soft Girl Summer</a><div class="card-meta"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face" alt="" class="avatar-xs" /><span class="card-username">@miachang</span><span class="card-likes"><svg viewBox="0 0 24 24" fill="currentColor" class="like-icon-sm"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>3.6k</span></div><div class="card-tags"><span class="tag">Y2K</span></div></div></article>
+          <article class="outfit-card card-tall"><a href="#post-detail" class="card-image-wrap"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Suit" class="card-image" loading="lazy" /><div class="card-overlay"><button class="overlay-like" aria-label="Like"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button></div></a><div class="card-info"><a href="#post-detail" class="card-title">Power Suit Look</a><div class="card-meta"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=face" alt="" class="avatar-xs" /><span class="card-username">@marcotorres</span><span class="card-likes"><svg viewBox="0 0 24 24" fill="currentColor" class="like-icon-sm"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>2.2k</span></div><div class="card-tags"><span class="tag">Formal</span></div></div></article>
+          <article class="outfit-card card-medium"><a href="#post-detail" class="card-image-wrap"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80" alt="Evening" class="card-image" loading="lazy" /><div class="card-overlay"><button class="overlay-like" aria-label="Like"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button></div></a><div class="card-info"><a href="#post-detail" class="card-title">Evening Elegance</a><div class="card-meta"><img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=40&h=40&fit=crop&crop=face" alt="" class="avatar-xs" /><span class="card-username">@janelim</span><span class="card-likes"><svg viewBox="0 0 24 24" fill="currentColor" class="like-icon-sm"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>5.1k</span></div><div class="card-tags"><span class="tag">Formal</span></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- POST DETAIL PAGE -->
+    <section class="page" id="post-detail">
+      <div class="page-inner page-inner--post">
+        <div class="post-layout">
+          <div class="post-image-col">
+            <div class="post-image-wrap"><img src="media/casual.jpg" alt="Casual Outfit" class="post-image" /></div>
+          </div>
+          <div class="post-detail-col">
+            <div class="post-author">
+              <img src="media/pp1.jpg" alt="Sofia Marini" class="avatar-md" />
+              <div><p class="post-author-name">Sofia Marini</p><p class="post-author-handle">@sofiamarini &middot; 4h ago</p></div>
+              <button class="btn-outline-sm" id="follow-btn">Follow</button>
+            </div>
+            <h1 class="post-title-large">Casual</h1>
+            <p class="post-description">A timeless trench coat look for an effortless autumn day out. Layered over a ribbed white turtleneck and straight-leg jeans, the kind of outfit that feels put-together without trying. White sneakers keep it grounded and relaxed.</p>
+            <div class="post-tags"><span class="tag">Casual</span><span class="tag">Minimalist</span><span class="tag">Autumn</span><span class="tag">Trench Coat</span></div>
+            <div class="post-actions">
+              <button class="action-btn like-btn" id="post-like-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg><span>2,412</span></button>
+              <button class="action-btn comment-btn" id="post-comment-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><span>48</span></button>
+              <button class="action-btn share-btn" id="post-share-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span>Share</span></button>
+              <button class="action-btn save-btn" id="post-save-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg><span>Save</span></button>
+            </div>
+            <div class="post-divider"></div>
+            <div class="comments-section">
+              <h2 class="comments-heading">Comments <span class="comments-count">48</span></h2>
+              <div class="comment-list">
+                <div class="comment" id="comment-1"><img src="https://images.unsplash.com/photo-1463453091185-61582044d556?w=40&h=40&fit=crop&crop=face" alt="" class="avatar-xs" /><div class="comment-body"><p class="comment-author">alexkwon</p><p class="comment-text">This is such a clean look! The trench + turtleneck combo is everything.</p><span class="comment-time">2h ago</span></div></div>
+                <div class="comment" id="comment-2"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face" alt="" class="avatar-xs" /><div class="comment-body"><p class="comment-author">miachang</p><p class="comment-text">Love how effortless this is. Where's the trench from?</p><span class="comment-time">3h ago</span></div></div>
+                <div class="comment" id="comment-3"><img src="media/pp2.jpg" alt="" class="avatar-xs" /><div class="comment-body"><p class="comment-author">emmarose</p><p class="comment-text">Saving this for autumn inspo! Obsessed with this whole look.</p><span class="comment-time">4h ago</span></div></div>
+                <div class="comment" id="comment-4"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=face" alt="" class="avatar-xs" /><div class="comment-body"><p class="comment-author">marcotorres</p><p class="comment-text">Classic never goes out of style. Well curated!</p><span class="comment-time">5h ago</span></div></div>
+              </div>
+              <div class="comment-input-wrap"><img src="media/pp1.jpg" alt="" class="avatar-xs" /><input type="text" class="comment-input" placeholder="Add a comment..." id="comment-input" /><button class="btn-post-comment" id="post-comment-submit">Post</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREATE POST PAGE -->
+    <section class="page" id="create">
+      <div class="page-inner">
+        <div class="page-heading"><h1 class="page-title">Share Your Look</h1><p class="page-subtitle">Upload your outfit and inspire the community</p></div>
+        <div class="create-layout">
+          <div class="upload-col">
+            <label class="upload-area" for="upload-input" id="upload-area-label">
+              <div class="upload-placeholder">
+                <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <p class="upload-label">Drop your photo here</p>
+                <p class="upload-sub">or click to browse &middot; JPG, PNG, WEBP</p>
+                <span class="upload-btn-ui">Choose File</span>
+              </div>
+              <input type="file" id="upload-input" accept="image/*" style="display:none;" />
+            </label>
+            <p class="upload-hint">Best results: portrait or square images &middot; Max 20MB</p>
+          </div>
+          <div class="form-col">
+            <form class="create-form" id="create-post-form" novalidate>
+              <div class="form-group"><label class="form-label" for="outfit-title">Outfit Title <span class="required">*</span></label><input type="text" class="form-input" id="outfit-title" placeholder="e.g. Sunday Casual Beige" maxlength="80" /></div>
+              <div class="form-group"><label class="form-label" for="outfit-desc">Description</label><textarea class="form-textarea" id="outfit-desc" placeholder="Tell us about this look — items, inspiration, occasion..." rows="4"></textarea></div>
+              <div class="form-group">
+                <label class="form-label">Style Category <span class="required">*</span></label>
+                <div class="category-chips" id="category-chips">
+                  <label class="cat-chip"><input type="radio" name="category" value="casual" style="display:none" id="cat-casual" /><span>Casual</span></label>
+                  <label class="cat-chip"><input type="radio" name="category" value="acubi" style="display:none" id="cat-acubi" /><span>Acubi</span></label>
+                  <label class="cat-chip"><input type="radio" name="category" value="grunge" style="display:none" id="cat-grunge" /><span>Grunge</span></label>
+                  <label class="cat-chip"><input type="radio" name="category" value="streetwear" style="display:none" id="cat-streetwear" /><span>Streetwear</span></label>
+                  <label class="cat-chip"><input type="radio" name="category" value="formal" style="display:none" id="cat-formal" /><span>Formal</span></label>
+                  <label class="cat-chip"><input type="radio" name="category" value="vintage" style="display:none" id="cat-vintage" /><span>Vintage</span></label>
+                  <label class="cat-chip"><input type="radio" name="category" value="minimalist" style="display:none" id="cat-minimalist" /><span>Minimalist</span></label>
+                  <label class="cat-chip"><input type="radio" name="category" value="y2k" style="display:none" id="cat-y2k" /><span>Y2K</span></label>
+                  <label class="cat-chip"><input type="radio" name="category" value="smartcasual" style="display:none" id="cat-smartcasual" /><span>Smart Casual</span></label>
+                  <label class="cat-chip"><input type="radio" name="category" value="cottagecore" style="display:none" id="cat-cottagecore" /><span>Cottagecore</span></label>
+                </div>
+              </div>
+              <div class="form-group"><label class="form-label" for="outfit-tags">Tags</label><input type="text" class="form-input" id="outfit-tags" placeholder="e.g. trench, autumn, turtleneck (comma-separated)" /><p class="form-hint">Add up to 10 tags to help people discover your post</p></div>
+              <div class="form-group">
+                <label class="form-label">Visibility</label>
+                <div class="visibility-options">
+                  <label class="visibility-option" for="vis-public"><input type="radio" name="visibility" value="public" id="vis-public" checked style="display:none" /><div class="vis-card" id="vis-card-public"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="vis-icon"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg><div><p class="vis-label">Public</p><p class="vis-desc">Everyone can see this</p></div></div></label>
+                  <label class="visibility-option" for="vis-followers"><input type="radio" name="visibility" value="followers" id="vis-followers" style="display:none" /><div class="vis-card" id="vis-card-followers"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="vis-icon"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg><div><p class="vis-label">Followers Only</p><p class="vis-desc">Only your followers</p></div></div></label>
+                  <label class="visibility-option" for="vis-private"><input type="radio" name="visibility" value="private" id="vis-private" style="display:none" /><div class="vis-card" id="vis-card-private"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="vis-icon"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><div><p class="vis-label">Private</p><p class="vis-desc">Only visible to you</p></div></div></label>
+                </div>
+              </div>
+              <div class="form-actions"><button type="button" class="btn-secondary" id="save-draft-btn">Save Draft</button><button type="submit" class="btn-primary" id="publish-btn">Publish Outfit</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WARDROBE PAGE -->
+    <section class="page" id="wardrobe">
+      <div class="page-inner">
+        <div class="wardrobe-header">
+          <div><h1 class="page-title">My Wardrobe</h1><p class="page-subtitle">Your digital closet &mdash; 24 items</p></div>
+          <button class="btn-primary" id="add-item-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> Add Item</button>
+        </div>
+        <div class="wardrobe-tabs">
+          <button class="wtab active" id="wtab-all">All</button>
+          <button class="wtab" id="wtab-tops">Tops</button>
+          <button class="wtab" id="wtab-bottoms">Bottoms</button>
+          <button class="wtab" id="wtab-outerwear">Outerwear</button>
+          <button class="wtab" id="wtab-shoes">Shoes</button>
+          <button class="wtab" id="wtab-accessories">Accessories</button>
+        </div>
+        <div class="wardrobe-grid" id="wardrobe-grid">
+          <article class="wardrobe-item" id="witem-1"><div class="wardrobe-item-image-wrap"><img src="https://images.unsplash.com/photo-1584661584779-f2d38cfc8bca?w=400&q=80" alt="Beige Crewneck" class="wardrobe-item-img" loading="lazy" /><button class="witem-more"><svg viewBox="0 0 24 24" fill="currentColor" width="14"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></button></div><div class="wardrobe-item-info"><p class="witem-name">Beige Crewneck</p><p class="witem-meta"><span class="witem-cat">Tops</span><span class="witem-color-dot" style="background:#d4b896;"></span></p></div></article>
+          <article class="wardrobe-item" id="witem-2"><div class="wardrobe-item-image-wrap"><img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&q=80" alt="Navy Trousers" class="wardrobe-item-img" loading="lazy" /><button class="witem-more"><svg viewBox="0 0 24 24" fill="currentColor" width="14"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></button></div><div class="wardrobe-item-info"><p class="witem-name">Navy Wide-Leg Trousers</p><p class="witem-meta"><span class="witem-cat">Bottoms</span><span class="witem-color-dot" style="background:#1e3a5f;"></span></p></div></article>
+          <article class="wardrobe-item" id="witem-3"><div class="wardrobe-item-image-wrap"><img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&q=80" alt="Trench" class="wardrobe-item-img" loading="lazy" /><button class="witem-more"><svg viewBox="0 0 24 24" fill="currentColor" width="14"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></button></div><div class="wardrobe-item-info"><p class="witem-name">Classic Trench Coat</p><p class="witem-meta"><span class="witem-cat">Outerwear</span><span class="witem-color-dot" style="background:#c4a882;"></span></p></div></article>
+          <article class="wardrobe-item" id="witem-4"><div class="wardrobe-item-image-wrap"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80" alt="White Sneakers" class="wardrobe-item-img" loading="lazy" /><button class="witem-more"><svg viewBox="0 0 24 24" fill="currentColor" width="14"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></button></div><div class="wardrobe-item-info"><p class="witem-name">White Leather Sneakers</p><p class="witem-meta"><span class="witem-cat">Shoes</span><span class="witem-color-dot" style="background:#e8e8e8;border:1px solid #ccc;"></span></p></div></article>
+          <article class="wardrobe-item" id="witem-5"><div class="wardrobe-item-image-wrap"><img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&q=80" alt="Black Turtleneck" class="wardrobe-item-img" loading="lazy" /><button class="witem-more"><svg viewBox="0 0 24 24" fill="currentColor" width="14"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></button></div><div class="wardrobe-item-info"><p class="witem-name">Black Ribbed Turtleneck</p><p class="witem-meta"><span class="witem-cat">Tops</span><span class="witem-color-dot" style="background:#222;"></span></p></div></article>
+          <article class="wardrobe-item" id="witem-6"><div class="wardrobe-item-image-wrap"><img src="https://images.unsplash.com/photo-1584184924103-e310d9a4b49a?w=400&q=80" alt="Tan Bag" class="wardrobe-item-img" loading="lazy" /><button class="witem-more"><svg viewBox="0 0 24 24" fill="currentColor" width="14"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></button></div><div class="wardrobe-item-info"><p class="witem-name">Tan Leather Crossbody</p><p class="witem-meta"><span class="witem-cat">Accessories</span><span class="witem-color-dot" style="background:#a67c52;"></span></p></div></article>
+          <article class="wardrobe-item" id="witem-7"><div class="wardrobe-item-image-wrap"><img src="https://images.unsplash.com/photo-1598522325074-042db73aa4e6?w=400&q=80" alt="Olive Trousers" class="wardrobe-item-img" loading="lazy" /><button class="witem-more"><svg viewBox="0 0 24 24" fill="currentColor" width="14"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></button></div><div class="wardrobe-item-info"><p class="witem-name">Olive Tailored Trousers</p><p class="witem-meta"><span class="witem-cat">Bottoms</span><span class="witem-color-dot" style="background:#4a5240;"></span></p></div></article>
+          <article class="wardrobe-item" id="witem-8"><div class="wardrobe-item-image-wrap"><img src="https://images.unsplash.com/photo-1568252542512-9fe8fe9c87bb?w=400&q=80" alt="Brown Boots" class="wardrobe-item-img" loading="lazy" /><button class="witem-more"><svg viewBox="0 0 24 24" fill="currentColor" width="14"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></button></div><div class="wardrobe-item-info"><p class="witem-name">Brown Ankle Boots</p><p class="witem-meta"><span class="witem-cat">Shoes</span><span class="witem-color-dot" style="background:#6b3e26;"></span></p></div></article>
+          <article class="wardrobe-item" id="witem-9"><div class="wardrobe-item-image-wrap"><img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&q=80" alt="White Oxford" class="wardrobe-item-img" loading="lazy" /><button class="witem-more"><svg viewBox="0 0 24 24" fill="currentColor" width="14"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></button></div><div class="wardrobe-item-info"><p class="witem-name">White Oxford Shirt</p><p class="witem-meta"><span class="witem-cat">Tops</span><span class="witem-color-dot" style="background:#f0f0f0;border:1px solid #ccc;"></span></p></div></article>
+          <article class="wardrobe-item" id="witem-10"><div class="wardrobe-item-image-wrap"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&q=80" alt="Cream Bag" class="wardrobe-item-img" loading="lazy" /><button class="witem-more"><svg viewBox="0 0 24 24" fill="currentColor" width="14"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></button></div><div class="wardrobe-item-info"><p class="witem-name">Cream Shoulder Bag</p><p class="witem-meta"><span class="witem-cat">Accessories</span><span class="witem-color-dot" style="background:#f5efe3;border:1px solid #ccc;"></span></p></div></article>
+          <article class="wardrobe-item" id="witem-11"><div class="wardrobe-item-image-wrap"><img src="https://images.unsplash.com/photo-1582552938357-32b906df40cb?w=400&q=80" alt="Jeans" class="wardrobe-item-img" loading="lazy" /><button class="witem-more"><svg viewBox="0 0 24 24" fill="currentColor" width="14"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></button></div><div class="wardrobe-item-info"><p class="witem-name">Mid-Wash Straight Jeans</p><p class="witem-meta"><span class="witem-cat">Bottoms</span><span class="witem-color-dot" style="background:#5b7fa6;"></span></p></div></article>
+          <article class="wardrobe-item" id="witem-12"><div class="wardrobe-item-image-wrap"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&q=80" alt="Slip Dress" class="wardrobe-item-img" loading="lazy" /><button class="witem-more"><svg viewBox="0 0 24 24" fill="currentColor" width="14"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></button></div><div class="wardrobe-item-info"><p class="witem-name">Sage Satin Slip Dress</p><p class="witem-meta"><span class="witem-cat">Tops</span><span class="witem-color-dot" style="background:#8fad91;"></span></p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFILE PAGE -->
+    <section class="page" id="profile">
+      <div class="page-inner page-inner--profile">
+        <div class="profile-hero">
+          <div class="profile-cover"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80" alt="Cover" class="profile-cover-img" loading="lazy" /></div>
+          <div class="profile-info-wrap">
+            <img src="media/pp1.jpg" alt="Sofia Marini" class="profile-avatar" />
+            <div class="profile-info">
+              <h1 class="profile-name">Sofia Marini</h1>
+              <p class="profile-handle">@sofiamarini</p>
+              <p class="profile-bio">Fashion is my language. Minimalist, Casual, Vintage lover. Based in Milan.</p>
+              <div class="profile-stats">
+                <div class="stat"><span class="stat-num">142</span><span class="stat-label">Posts</span></div>
+                <div class="stat"><span class="stat-num">28.4k</span><span class="stat-label">Followers</span></div>
+                <div class="stat"><span class="stat-num">312</span><span class="stat-label">Following</span></div>
+              </div>
+            </div>
+            <div class="profile-actions">
+              <button class="btn-primary" id="edit-profile-btn">Edit Profile</button>
+              <button class="btn-icon" id="share-profile-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+            </div>
+          </div>
+        </div>
+        <div class="profile-tabs"><button class="ptab active" id="ptab-posts">Posts</button><button class="ptab" id="ptab-wardrobe">Wardrobe</button><button class="ptab" id="ptab-liked">Liked</button></div>
+        <div class="profile-grid" id="profile-posts-grid">
+          <a href="#post-detail" class="profile-post" id="ppost-1"><img src="media/casual.jpg" alt="Casual" class="profile-post-img" loading="lazy" /><div class="profile-post-overlay"><svg viewBox="0 0 24 24" fill="white" width="14"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg> 2.4k</div></a>
+          <a href="#post-detail" class="profile-post" id="ppost-2"><img src="https://images.unsplash.com/photo-1548334433-53bca3c17b40?w=500&q=80" alt="" class="profile-post-img" loading="lazy" /><div class="profile-post-overlay"><svg viewBox="0 0 24 24" fill="white" width="14"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg> 6.1k</div></a>
+          <a href="#post-detail" class="profile-post" id="ppost-3"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500&q=80" alt="" class="profile-post-img" loading="lazy" /><div class="profile-post-overlay"><svg viewBox="0 0 24 24" fill="white" width="14"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg> 4.8k</div></a>
+          <a href="#post-detail" class="profile-post" id="ppost-4"><img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=500&q=80" alt="" class="profile-post-img" loading="lazy" /><div class="profile-post-overlay"><svg viewBox="0 0 24 24" fill="white" width="14"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg> 4.3k</div></a>
+          <a href="#post-detail" class="profile-post" id="ppost-5"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&q=80" alt="" class="profile-post-img" loading="lazy" /><div class="profile-post-overlay"><svg viewBox="0 0 24 24" fill="white" width="14"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg> 3.3k</div></a>
+          <a href="#post-detail" class="profile-post" id="ppost-6"><img src="https://images.unsplash.com/photo-1554568218-0f1715e72254?w=500&q=80" alt="" class="profile-post-img" loading="lazy" /><div class="profile-post-overlay"><svg viewBox="0 0 24 24" fill="white" width="14"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg> 2.1k</div></a>
+          <a href="#post-detail" class="profile-post" id="ppost-7"><img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=500&q=80" alt="" class="profile-post-img" loading="lazy" /><div class="profile-post-overlay"><svg viewBox="0 0 24 24" fill="white" width="14"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg> 3.7k</div></a>
+          <a href="#post-detail" class="profile-post" id="ppost-8"><img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=500&q=80" alt="" class="profile-post-img" loading="lazy" /><div class="profile-post-overlay"><svg viewBox="0 0 24 24" fill="white" width="14"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg> 7.4k</div></a>
+          <a href="#post-detail" class="profile-post" id="ppost-9"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=500&q=80" alt="" class="profile-post-img" loading="lazy" /><div class="profile-post-overlay"><svg viewBox="0 0 24 24" fill="white" width="14"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg> 8.4k</div></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SETTINGS PAGE -->
+    <section class="page" id="settings">
+      <div class="page-inner page-inner--narrow">
+        <div class="page-heading"><h1 class="page-title">Settings</h1></div>
+        <div class="settings-layout">
+          <nav class="settings-nav">
+            <a href="#settings" class="settings-nav-item active" id="snav-account">Account</a>
+            <a href="#settings" class="settings-nav-item" id="snav-profile-s">Profile</a>
+            <a href="#settings" class="settings-nav-item" id="snav-appearance">Appearance</a>
+            <a href="#settings" class="settings-nav-item" id="snav-privacy">Privacy</a>
+            <a href="#settings" class="settings-nav-item" id="snav-notifications">Notifications</a>
+            <a href="#home" class="settings-nav-item settings-nav-item--danger" id="snav-logout">Log out</a>
+          </nav>
+          <div class="settings-content">
+            <h2 class="settings-section-title">Account</h2>
+            <div class="settings-card">
+              <div class="settings-field"><label class="settings-label" for="s-email">Email Address</label><input type="email" class="form-input" id="s-email" value="sofia.marini@email.com" /></div>
+              <div class="settings-field"><label class="settings-label" for="s-username">Username</label><input type="text" class="form-input" id="s-username" value="sofiamarini" /></div>
+              <div class="settings-field"><label class="settings-label" for="s-password">Password</label><input type="password" class="form-input" id="s-password" value="supersecretpass" /></div>
+              <div class="settings-field-actions"><button class="btn-primary" id="save-account-btn">Save Changes</button></div>
+            </div>
+            <h2 class="settings-section-title" style="margin-top:2rem;">Appearance</h2>
+            <div class="settings-card">
+              <div class="settings-row"><div><p class="settings-row-label">Theme</p><p class="settings-row-desc">Choose your preferred display mode</p></div><div class="theme-toggle-group"><button class="theme-btn active" id="theme-light">Light</button><button class="theme-btn" id="theme-dark">Dark</button><button class="theme-btn" id="theme-auto">Auto</button></div></div>
+              <div class="settings-row"><div><p class="settings-row-label">Compact Mode</p><p class="settings-row-desc">Reduce spacing in feeds</p></div><label class="toggle-switch" for="compact-toggle"><input type="checkbox" id="compact-toggle" /><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
+            </div>
+            <h2 class="settings-section-title" style="margin-top:2rem;">Privacy</h2>
+            <div class="settings-card">
+              <div class="settings-row"><div><p class="settings-row-label">Private Account</p><p class="settings-row-desc">Only approved followers can see your posts</p></div><label class="toggle-switch" for="private-toggle"><input type="checkbox" id="private-toggle" /><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
+              <div class="settings-row"><div><p class="settings-row-label">Allow Wardrobe Suggestions</p><p class="settings-row-desc">Let Fitly suggest outfits from your wardrobe</p></div><label class="toggle-switch" for="suggestions-toggle"><input type="checkbox" id="suggestions-toggle" checked /><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
+            </div>
+            <h2 class="settings-section-title" style="margin-top:2rem;">Notifications</h2>
+            <div class="settings-card">
+              <div class="settings-row"><div><p class="settings-row-label">New Followers</p><p class="settings-row-desc">Notify when someone follows you</p></div><label class="toggle-switch" for="notif-followers"><input type="checkbox" id="notif-followers" checked /><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
+              <div class="settings-row"><div><p class="settings-row-label">Likes on Posts</p><p class="settings-row-desc">Notify when someone likes your outfit</p></div><label class="toggle-switch" for="notif-likes"><input type="checkbox" id="notif-likes" checked /><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
+              <div class="settings-row"><div><p class="settings-row-label">Comments</p><p class="settings-row-desc">Notify when someone comments on your post</p></div><label class="toggle-switch" for="notif-comments"><input type="checkbox" id="notif-comments" /><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
+              <div class="settings-row"><div><p class="settings-row-label">Weekly Style Digest</p><p class="settings-row-desc">Email summary of trending looks</p></div><label class="toggle-switch" for="notif-digest"><input type="checkbox" id="notif-digest" checked /><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div>
+            </div>
+            <div class="danger-zone">
+              <h2 class="settings-section-title danger-title" style="margin-top:2rem;">Danger Zone</h2>
+              <div class="settings-card danger-card">
+                <div class="settings-row"><div><p class="settings-row-label danger-label">Delete Account</p><p class="settings-row-desc">Permanently remove your account and all data</p></div><button class="btn-danger" id="delete-account-btn">Delete</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+</body>
+</html>
